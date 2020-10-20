@@ -50,8 +50,8 @@ name: Lint
 on: push
 
 jobs:
-  run-linters:
-    name: Run linters
+  linting:
+    name: Run linting
     runs-on: ubuntu-latest
 
     steps:
@@ -61,7 +61,7 @@ jobs:
       # Install your linters here
 
       - name: Run linters
-        uses: wearerequired/lint-action@v1
+        uses: cognitedata/lint-action@v1.6.0
         with:
           github_token: ${{ secrets.github_token }}
           # Enable your linters here
@@ -99,7 +99,7 @@ jobs:
         run: npm install
 
       - name: Run linters
-        uses: wearerequired/lint-action@v1
+        uses: cognitedata/lint-action@v1.6.0
         with:
           github_token: ${{ secrets.github_token }}
           # Enable linters
@@ -131,7 +131,7 @@ jobs:
           tools: phpcs
 
       - name: Run linters
-        uses: wearerequired/lint-action@v1
+        uses: cognitedata/lint-action@v1.6.0
         with:
           github_token: ${{ secrets.github_token }}
           # Enable linters
@@ -169,7 +169,7 @@ jobs:
           echo "::add-path::vendor/bin"
 
       - name: Run linters
-        uses: wearerequired/lint-action@v1
+        uses: cognitedata/lint-action@v1.6.0
         with:
           github_token: ${{ secrets.github_token }}
           # Enable linters
@@ -201,7 +201,7 @@ jobs:
         run: pip install black flake8
 
       - name: Run linters
-        uses: wearerequired/lint-action@v1
+        uses: cognitedata/lint-action@v1.6.0
         with:
           github_token: ${{ secrets.github_token }}
           # Enable linters
